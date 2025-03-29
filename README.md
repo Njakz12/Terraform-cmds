@@ -9,8 +9,7 @@ resource "aws_vpc" "main" {
     cidr_block = "10.0.0.0/16"
     enable_dns_hostnames = true
     enable_dns_support = true
-
-    tags = {
+     tags = {
         Name = "main"
     }
 }
@@ -57,6 +56,7 @@ resource "aws_route_table_association" "main" {
 }
 
 # Create Security Group
+
 resource "aws_security_group" "allow_ssh" {
     name        = "allow_ssh"
     description = "Allow SSH inbound traffic"
