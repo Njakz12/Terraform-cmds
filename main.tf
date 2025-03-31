@@ -9,7 +9,7 @@ variable "cidr" {
 
 resource "aws_key_pair" "example" {
   key_name   = "terraform-demo-abhi"  # Replace with your desired key name
-  public_key = file("~/.ssh/id_rsa.pub")  # Replace with the path to your public key file
+  public_key = file("/Users/apple/.ssh/id_rsa")  # Replace with the path to your public key file
 }
 
 resource "aws_vpc" "myvpc" {
